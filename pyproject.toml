@@ -8,9 +8,12 @@ dependencies = [
     "beautifulsoup4>=4.15.0",
     "fastapi>=0.138.1",
     "ollama>=0.6.2",
+    "openai>=2.44.0",
+    "openapi>=2.0.0",
     "playwright>=1.60.0",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
+    "tiktoken>=0.13.0",
     "trafilatura>=2.1.0",
     "uvicorn>=0.49.0",
 ]

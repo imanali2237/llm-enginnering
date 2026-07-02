@@ -13,7 +13,9 @@ from LLM.llm import (
 )
 from LLM.titoken import tokenized_text
 from LLM.memory_illusion import chat_with_memory
+from LLM.tutor import ask_technical_tutor
 from models.chat_request import ChatRequest
+from models.tutor_request import TutorRequest
 
 router = APIRouter()
 
@@ -48,6 +50,13 @@ def token_calculator(data: TokenCalculator):
 @router.post("/chat")
 def chat(req: ChatRequest):
     return chat_with_memory(req.message)
+
+
+
+
+@router.post("/technical-tutor")
+def technical_tutor(payload: TutorRequest):
+    return ask_technical_tutor(payload.prompt)
 
 
 @router.post("/get-links")

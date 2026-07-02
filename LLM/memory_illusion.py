@@ -17,7 +17,7 @@ def chat_with_memory(user_message: str):
     CHAT_HISTORY.append({"role": "user", "content": user_message})
 
     # call Ollama instead of OpenAI
-    assistant_message = ollama_chat(CHAT_HISTORY, model="llama3")
+    assistant_message = ollama_chat(CHAT_HISTORY, model="gemma3:270m")
 
     # store assistant response
     CHAT_HISTORY.append({"role": "assistant", "content": assistant_message})
